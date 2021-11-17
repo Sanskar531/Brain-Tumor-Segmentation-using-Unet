@@ -1,4 +1,3 @@
-import mat73
 import numpy as np
 import SimpleITK as sitk
 from scipy.io import savemat
