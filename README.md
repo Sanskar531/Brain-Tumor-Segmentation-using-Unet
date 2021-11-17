@@ -11,4 +11,8 @@ Using the unet, we segmented those images using their true mask as leverage for 
 
 Different loss functions were used since, the normal binary cross entropy did not cope well with the class imbalance we were having in our tumor masks. Hence, we used other loss function named Weighted cross entropy and dice loss which created much better results. 
 
-## Note: The notebook has the same code as the python files. 
+Some of the results created by our unet using weighted cross entropy(this was the loss that gave us the highest dice coefficient) were: 
+
+![alt text](https://github.com/Sanskar531/Brain-Tumor-Segmentation-using-Unet/Result-images/SomeResults.png?raw=true)
+
+### Note: The notebook has the same code as the python files. 
