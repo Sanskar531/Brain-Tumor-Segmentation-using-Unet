@@ -13,6 +13,6 @@ Different loss functions were used since, the normal binary cross entropy did no
 
 Some of the results created by our unet using weighted cross entropy(this was the loss that gave us the highest dice coefficient) were: 
 
-![alt text](https://github.com/Sanskar531/Brain-Tumor-Segmentation-using-Unet/Result-images/SomeResults.png?raw=true)
+![](https://github.com/Sanskar531/Brain-Tumor-Segmentation-using-Unet/blob/master/Result%20images/SomeResults.png)
 
 ### Note: The notebook has the same code as the python files. 
