@@ -15,4 +15,6 @@ Some of the results created by our unet using weighted cross entropy(this was th
 
 ![](https://github.com/Sanskar531/Brain-Tumor-Segmentation-using-Unet/blob/master/Result%20images/SomeResults.png)
 
+Predictions vs Ground Truth 
+
 ### Note: The notebook has the same code as the python files. 
