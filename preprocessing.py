@@ -22,7 +22,6 @@ def remove_bias(X):
     corrector.SetConvergenceThreshold(0.01)
     corrector.SetMaximumNumberOfIterations([100,100,100,100])
     for i in range(len(X)):
-        print(i)
         img = sitk.GetImageFromArray(np.reshape(X[i], (512,512)))
         img = sitk.Cast(img, sitk.sitkFloat32)
         a = sitk.GetArrayFromImage(corrector.Execute(img))
@@ -51,11 +50,11 @@ def preprocess_data(data):
     # filter out images of different dimensions
     filter_diff(X,y,y_mask, (512,512));
     X = normalize_minMax(np.array(X));# normalize the x
-    X = remove_bias(X);# remove bias from X
+    # X = remove_bias(X);# remove bias from X
     #resizing x and y_mask for the input layer in the networks
     X = np.reshape(X,(len(X),X[0].shape[0],X[0].shape[1],1)); 
     # change y from denoting class as a number to a hot encoded binary matrix
-    y = keras.utils.to_categorical(np.array(data["y"])-1,3)
+    y = keras.utils.to_categorical(np.array(y)-1,3)
     y_mask = np.array(y_mask).astype(int);
     y_mask =np.reshape(y_mask,(len(y_mask),y_mask[0].shape[0],y_mask[0].shape[1],1));
     y_mask = tf.image.resize(y_mask, (324,324)).numpy();
