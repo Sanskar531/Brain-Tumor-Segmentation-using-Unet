@@ -8,3 +8,7 @@ This data consists of 3064 images along with the type of tumors and their tumor 
 .mat files, they are joined together using matlab and then exported as "./stacked.mat".
 
 Using the unet, we segmented those images using their true mask as leverage for the network to learn where the tumors are.  
+
+Different loss functions were used since, the normal binary cross entropy did not cope well with the class imbalance we were having in our tumor masks. Hence, we used other loss function named Weighted cross entropy and dice loss which created much better results. 
+
+## Note: The notebook has the same code as the python files. 
